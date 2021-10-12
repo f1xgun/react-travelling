@@ -1,0 +1,33 @@
+.card {
+  display: flex;
+}
+
+.link {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #f85a47;
+}
+
+.main {
+  .card {
+    display: block;
+  }
+
+  .img {
+    max-width: 555px;
+    max-height: 420px;
+  }
+
+  .title {
+    font-family: Playfair Display;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    color: #000000;
+  }
+
+  .text {
+    display: none;
+  }
+}

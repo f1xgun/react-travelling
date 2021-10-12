@@ -1,0 +1,265 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ffe7e7;
+  backdrop-filter: blur(15px);
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #000;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+
+    h2 {
+      font-weight: 700;
+      font-size: 26px;
+    }
+
+    span {
+      color: #f85a47;
+    }
+  }
+
+  img {
+    margin-right: 7px;
+  }
+
+  .header__links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+    color: #121212;
+    .active {
+      font-weight: 700;
+      position: relative;
+      transition: width 0.2s ease-in;
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: -12px;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background-color: #f85a47;
+      }
+    }
+
+    li:not(:last-child) {
+      margin-right: 64px;
+    }
+  }
+
+  .header__login {
+    padding: 14px 60px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.information {
+  margin-bottom: 170px;
+  position: relative;
+
+  .information__title {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 96px;
+    margin-bottom: 36px;
+    color: #050505;
+    max-width: 625px;
+    font-family: 'Playfair Display';
+    span {
+      color: #f85a47;
+      font-family: 'Playfair Display';
+    }
+  }
+
+  .information__text {
+    margin-bottom: 37px;
+    line-height: 34px;
+    color: #373737;
+    max-width: 457px;
+  }
+
+  .offer__info {
+    background-color: #fff;
+    max-width: 885px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    padding: 20px 30px;
+    flex-wrap: wrap;
+
+    h4 {
+      color: #505050;
+      margin: 0 auto 12px;
+      font-weight: 400;
+    }
+
+    p {
+      color: #121212;
+      font-weight: 600;
+      font-size: 28px;
+      margin: 0 auto;
+    }
+
+    .info__search-btn {
+      padding: 26px 60px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  .information__bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+.button {
+  background-color: #f85a47;
+  text-align: center;
+  color: #fff;
+  border-radius: 20px;
+  border: 0px;
+  cursor: pointer;
+}
+
+// Places
+
+.places {
+  margin-bottom: 160px;
+
+  .places__subtitle {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 64px;
+    color: #f85a47;
+    margin-bottom: 4px;
+  }
+
+  .places__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .places__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    color: #050505;
+    font-family: 'Playfair Display';
+    margin-bottom: 30px;
+  }
+
+  .places__moreBtn {
+    padding: 20px 77px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #fdfdfd;
+  }
+
+  .places__selector {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+    li:not(:last-child) {
+      margin-right: 64px;
+    }
+
+    li {
+      font-size: 22px;
+      line-height: 30px;
+      color: #ff8273;
+    }
+
+    .active {
+      font-weight: 700;
+      color: #ff4029;
+      transition: width 0.2s ease-in;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: -13px;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background-color: #f85a47;
+      }
+    }
+  }
+
+  .places__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.news {
+  margin-bottom: 90px;
+
+  .news__subtitle {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 64px;
+    color: #f85a47;
+    margin-bottom: 18px;
+  }
+
+  .news__title {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    color: #222222;
+    margin-bottom: 50px;
+  }
+
+  button {
+    border: 2px solid #f85a47;
+    border-radius: 20px;
+    padding: 24px 20px;
+    margin-left: 24px;
+  }
+
+  .slideItems {
+    display: flex;
+  }
+
+  .verticalItems {
+    display: flex;
+    flex-direction: column;
+  }
+}

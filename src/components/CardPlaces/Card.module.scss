@@ -1,0 +1,29 @@
+.card {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.tag {
+  font-size: 16px;
+  line-height: 22px;
+  color: #222222;
+  position: absolute;
+  background-color: #ffffff;
+  text-align: center;
+  width: 106px;
+  padding: 5px 0;
+  top: 10px;
+  right: 11px;
+  border-radius: 4px;
+}
+
+.title {
+  font-weight: 700;
+  line-height: 33px;
+  color: #fdfdfd;
+  position: absolute;
+  font-size: 24px;
+  text-align: left;
+  padding: 0 20px 15px;
+  bottom: 0%;
+}
