@@ -1,0 +1,56 @@
+.information {
+    margin-bottom: 170px;
+    position: relative;
+    .title {
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 96px;
+        margin-bottom: 36px;
+        color: #050505;
+        max-width: 625px;
+        font-family: 'Playfair Display';
+        span {
+            color: #f85a47;
+            font-family: 'Playfair Display';
+        }
+    }
+    .text {
+        margin-bottom: 37px;
+        line-height: 34px;
+        color: #373737;
+        max-width: 457px;
+    }
+    .offer {
+        background-color: #fff;
+        max-width: 885px;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        align-items: center;
+        padding: 20px 30px;
+        flex-wrap: wrap;
+        h4 {
+            color: #505050;
+            margin: 0 auto 12px;
+            font-weight: 400;
+        }
+        p {
+            color: #121212;
+            font-weight: 600;
+            font-size: 28px;
+            margin: 0 auto;
+        }
+        .searchBtn {
+            padding: 26px 60px;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+    .bg {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+}
