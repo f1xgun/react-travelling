@@ -1,43 +1,56 @@
 .card {
-  display: flex;
+    display: flex;
+    &:nth-child(3n + 1) {
+        .card {
+            display: block;
+        }
+        .img {
+            max-width: 555px;
+            max-height: 420px;
+        }
+        .title {
+            font-size: 36px;
+            line-height: 40px;
+        }
+        .text {
+            display: none;
+        }
+    }
 }
 
 .title {
-  font-family: 'Playfair Display';
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 36px;
-  color: #000000;
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    color: #000000;
 }
 
 .text {
-  font-size: 16px;
-  line-height: 22px;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 .link {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 25px;
-  color: #f85a47;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #f85a47;
 }
 
 .main {
-  .card {
-    display: block;
-  }
-
-  .img {
-    max-width: 555px;
-    max-height: 420px;
-  }
-
-  .title {
-    font-size: 36px;
-    line-height: 40px;
-  }
-
-  .text {
-    display: none;
-  }
+    .card {
+        display: block;
+    }
+    .img {
+        max-width: 555px;
+        max-height: 420px;
+    }
+    .title {
+        font-size: 36px;
+        line-height: 40px;
+    }
+    .text {
+        display: none;
+    }
 }
