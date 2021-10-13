@@ -1,0 +1,74 @@
+.places {
+  margin-bottom: 160px;
+
+  .subtitle {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 64px;
+    color: #f85a47;
+    margin-bottom: 4px;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    color: #050505;
+    font-family: 'Playfair Display';
+    margin-bottom: 30px;
+  }
+
+  .moreBtn {
+    padding: 20px 77px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #fdfdfd;
+  }
+
+  .selector {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+    li:not(:last-child) {
+      margin-right: 64px;
+    }
+
+    li {
+      font-size: 22px;
+      line-height: 30px;
+      color: #ff8273;
+    }
+
+    .active {
+      font-weight: 700;
+      color: #ff4029;
+      transition: width 0.2s ease-in;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: -13px;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background-color: #f85a47;
+      }
+    }
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

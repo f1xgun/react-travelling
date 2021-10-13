@@ -1,4 +1,8 @@
 import styles from './CardNews.module.scss';
+console.log(styles);
+
+console.log(styles.card)
+
 
 function CardNews(props) {
   return (
