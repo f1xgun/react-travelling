@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./NewsSlider.module.scss";
-import CardNews from "./CardNews/CardNews";
+import CardNews from "../CardNews/CardNews";
 
 const cards = [
   {

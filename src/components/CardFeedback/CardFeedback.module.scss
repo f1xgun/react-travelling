@@ -1,0 +1,47 @@
+.card {
+  width: 360px;
+  border: 5px solid #f85a47;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.content {
+  padding: 37px 52px;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.img {
+  width: 48px;
+  height: 48px;
+  margin-right: 19px;
+}
+
+.name {
+  font-weight: 700;
+  color: #333333;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.location {
+  font-size: 14px;
+  line-height: 19px;
+  color: #666666;
+}
+
+.grade {
+  display: flex;
+  align-items: center;
+  margin-bottom: 27px;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 28px;
+  color: #333333;
+}

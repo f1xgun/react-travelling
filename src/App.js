@@ -1,7 +1,9 @@
-import Header from './components/Header'
+import Header from './components/Header/Header'
 import Information from './components/Information/Information';
-import NewsSlider from './components/NewsSlider';
+import NewsSlider from './components/NewsSlider/NewsSlider';
 import Places from './components/Places/Places';
+import FeedBack from './components/FeedBack/FeedBack';
+import Subscribe from './components/Subscribe/Subscribe';
 
 
 function App() {
@@ -13,8 +15,11 @@ function App() {
 
       <Places />
       
-      <NewsSlider/>
+      <NewsSlider />
 
+      <FeedBack />
+
+      <Subscribe />
     </div>
   );
 }

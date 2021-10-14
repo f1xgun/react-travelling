@@ -1,0 +1,33 @@
+.feedback {
+  margin-bottom: 350px;
+  position: relative;
+
+  .subtitle {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 64px;
+    color: #f85a47;
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    color: #222222;
+    margin-bottom: 100px;
+  }
+
+  .moreBtn {
+    padding: 20px 77px;
+    position: absolute;
+    left: 40%;
+  }
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
