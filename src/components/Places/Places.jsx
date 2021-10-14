@@ -4,9 +4,9 @@ import CardPlaces from '../../components/CardPlaces/CardPlaces'
 import Button from '../../components/Button'
 
 const places = [
-  {title: 'Candi Borobuddur, Magelang', tag: 'Temple', imageUrl: '1.jpg'},
-  {title: 'Malioboro, Yogyakarta', tag: 'City Tour', imageUrl: '2.jpg'},
-  {title: 'Balekambang, Malang', tag: 'Beach', imageUrl: '3.jpg'}
+  {title: 'Candi Borobuddur, Magelang', tag: 'Temple', imageUrl: 'img/Places/1.jpg'},
+  {title: 'Malioboro, Yogyakarta', tag: 'City Tour', imageUrl: 'img/Places/2.jpg'},
+  {title: 'Balekambang, Malang', tag: 'Beach', imageUrl: 'img/Places/3.jpg'}
 ];  
 
 const countries = ['Indonesia', 'Swiss', 'Malaysia', 'Japan', 'Maldives'];

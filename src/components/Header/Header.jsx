@@ -4,7 +4,7 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img src="/img/logo.svg" alt="Logo" />
+        <img src="img/logo.svg" alt="Logo" />
         <h2>
           Way<span>farer</span>
         </h2>

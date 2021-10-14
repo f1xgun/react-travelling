@@ -29,7 +29,7 @@ function Information() {
           <Button title="Search" className={styles.searchBtn} />
         </li>
       </ul>
-      <img className={styles.bg} src="/img/info__bg.png" alt="Beach" />
+      <img className={styles.bg} src="img/info__bg.png" alt="Beach" />
     </section>
   );
 }
