@@ -7,28 +7,28 @@ const cards = [
   {
     person: 'Jane Fooster',
     location: 'Oslo, Norwegia',
-    grade: '5',
+    grade: 5,
     text: 'Moderate children at of outweigh it. Unsatiable it considered invitation he travelling insensible. Consulted admitting oh mr up as described.',
     id: 1
   },
   {
     person: 'Jane Fooster',
     location: 'Oslo, Norwegia',
-    grade: '5',
+    grade: 5,
     text: 'Moderate children at of outweigh it. Unsatiable it considered invitation he travelling insensible. Consulted admitting oh mr up as described. ',
     id: 2
   },
   {
     person: 'Jane Fooster',
     location: 'Oslo, Norwegia',
-    grade: '5',
+    grade: 5,
     text: 'Moderate children at of outweigh it. Unsatiable it considered invitation he travelling insensible. Consulted admitting oh mr up as described.',
     id: 3
   },
   {
     person: 'Jane Fooster',
     location: 'Oslo, Norwegia',
-    grade: '5',
+    grade: 5,
     text: 'Moderate children at of outweigh it. Unsatiable it considered invitation he travelling insensible. Consulted admitting oh mr up as described.',
     id: 4
   }

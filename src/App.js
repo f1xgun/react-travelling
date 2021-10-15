@@ -4,22 +4,27 @@ import NewsSlider from './components/NewsSlider/NewsSlider';
 import Places from './components/Places/Places';
 import FeedBack from './components/FeedBack/FeedBack';
 import Subscribe from './components/Subscribe/Subscribe';
+import Footer from './components/Footer/Footer'
 
 
 function App() {
   return (
-    <div className="wrapper">
-      <Header />
+    <div>
+      <div className="wrapper">
+        <Header />
 
-      <Information />
+        <Information />
 
-      <Places />
-      
-      <NewsSlider />
+        <Places />
+        
+        <NewsSlider />
 
-      <FeedBack />
+        <FeedBack />
 
-      <Subscribe />
+        <Subscribe />
+
+      </div>
+      <Footer />
     </div>
   );
 }
