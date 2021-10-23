@@ -1,5 +1,6 @@
 import Button from "../Button";
 import styles from "./Header.module.scss";
+import {Switch, Route, NavLink } from "react-router-dom";
 function Header() {
   return (
     <header className={styles.header}>
@@ -10,10 +11,29 @@ function Header() {
         </h2>
       </div>
       <ul className={styles.links}>
-        <li className={styles.active}>Home</li>
-        <li>Place</li>
-        <li>News</li>
-        <li>Feedback</li>
+          <NavLink to="/home" activeClassName={styles.active}>
+        <li>
+            Home
+        </li>
+          </NavLink>
+
+          <NavLink to="/place" activeClassName={styles.active}>
+        <li>
+            Place
+        </li>
+          </NavLink>
+
+          <NavLink to="/news" activeClassName={styles.active}>
+        <li>
+            News
+        </li>
+          </NavLink>
+
+          <NavLink to="/feedback" activeClassName={styles.active}>
+        <li>
+            Feedback
+        </li>
+          </NavLink>
       </ul>
       <Button className={styles.login} title="Login" />
     </header>
