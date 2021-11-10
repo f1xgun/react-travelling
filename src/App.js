@@ -1,31 +1,33 @@
-import Header from './components/Header/Header'
-import Information from './components/Information/Information';
-import NewsSlider from './components/NewsSlider/NewsSlider';
-import Places from './components/Places/Places';
-import FeedBack from './components/FeedBack/FeedBack';
-import Subscribe from './components/Subscribe/Subscribe';
-import Footer from './components/Footer/Footer'
-
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/Pages/Home";
+import Places from "./components/Pages/Places";
 
 function App() {
   return (
-    <div>
-      <div className="wrapper">
-        <Header />
-
-        <Information />
-
-        <Places />
-        
-        <NewsSlider />
-
-        <FeedBack />
-
-        <Subscribe />
-
+    <Router>
+      <div>
+        <div className="wrapper">
+          <Header />
+          <Switch>
+            <Route path="/home" exact>
+              <Home />
+            </Route>
+            <Route path="/place" exact>
+              <Places />
+            </Route>
+            <Route path="/news" exact>
+              news
+            </Route>
+            <Route path="/feedback" exact>
+              feedback
+            </Route>
+          </Switch>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </Router>
   );
 }
 

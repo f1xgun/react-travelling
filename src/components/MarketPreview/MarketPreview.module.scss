@@ -1,0 +1,22 @@
+.bg {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  left: 35px;
+  top: 110px;
+  position: absolute;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 28px;
+  color: #fef8f8;
+  span {
+    color: #f85a47;
+  }
+}

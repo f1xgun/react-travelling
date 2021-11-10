@@ -26,28 +26,30 @@
         user-select: none;
         li {
             transition: .2s ease-in;
-            &::after {
-                position: absolute;
-                content: '';
-                bottom: -12px;
-                left: 0;
-                height: 6px;
-                background-color: #f85a47;
-                width: 0;
-                transition: width 0.2s ease-in;
-            }
+            
+                &::after {
+                    position: absolute;
+                    content: '';
+                    bottom: -12px;
+                    left: 0;
+                    height: 6px;
+                    background-color: #f85a47;
+                    width: 0;
+                    transition: width 0.2s ease-in;
+                }
+            
         }
-        .active,
+        .active li,
         li:hover {
             position: relative;
             &::after {
                 width: 100%;
             }
         }
-        .active {
+        .active li{
             font-weight: 700;
         }
-        li:not(:last-child) {
+        a:not(:last-child) {
             margin-right: 64px;
         }
     }

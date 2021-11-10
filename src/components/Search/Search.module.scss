@@ -1,0 +1,30 @@
+.search {
+  position: relative;
+  height: 50px;
+  margin: 0;
+}
+
+.input {
+  height: 100%;
+  border: 3px solid #f85a47;
+  border-radius: 20px;
+  background: #fffefe;
+  padding: 9px 0px 6px 66px;
+  max-width: 304px;
+  &::placeholder {
+    font-size: 26px;
+    line-height: 35px;
+    text-align: center;
+    color: rgba(25, 36, 69, 0.7);
+  }
+}
+
+.searchIcon {
+  background: #f85a47;
+  border-radius: 20px;
+  padding: 8px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -25px;
+}

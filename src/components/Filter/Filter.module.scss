@@ -1,0 +1,26 @@
+.name {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 11px;
+}
+
+.item {
+  margin-bottom: 30px;
+  display: flex;
+
+  input {
+    width: 81px;
+  }
+}
+
+.mainItem {
+  margin-bottom: 30px;
+
+  input {
+    width: 303px;
+  }
+}
+
+.itemMargin {
+  margin-right: 30px;
+}
