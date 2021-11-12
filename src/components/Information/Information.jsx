@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Information.module.scss";
 import Button from "./../Button";
+import { NavLink } from 'react-router-dom';
 
 function Information() {
   return (
@@ -26,7 +27,9 @@ function Information() {
           <p>$200 - $600</p>
         </li>
         <li>
-          <Button title="Search" className={styles.searchBtn} />
+          <NavLink to="/place">
+            <Button title="Search" className={styles.searchBtn} />
+          </NavLink>
         </li>
       </ul>
       <img className={styles.bg} src="img/info__bg.png" alt="Beach" />
