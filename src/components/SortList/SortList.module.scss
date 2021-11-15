@@ -31,14 +31,14 @@
     transition: width 0.2s ease-in;
   }
 }
-.active .sort,
+.active,
 .sort:hover {
   position: relative;
   &::after {
     width: 100%;
   }
 }
-.active .sort {
+.active {
   font-weight: 700;
 }
 
