@@ -77,14 +77,18 @@ function Places() {
                 sortType={sortType}
                 setSortType={setSortType}
             />
-            {filterCards(cards)
-                .filter((item) =>
-                    item.name.toLowerCase().includes(searchValue.toLowerCase())
-                )
-                .map((card) => (
-                    <HotelCard key={card.id} {...card} />
-                ))}
-            <Filter />
+            <div className="places-content">
+              <Filter />
+              <div>
+                {filterCards(cards)
+                    .filter((item) =>
+                        item.name.toLowerCase().includes(searchValue.toLowerCase())
+                    )
+                    .map((card) => (
+                        <HotelCard key={card.id} {...card} />
+                    ))}
+              </div>
+            </div>
         </>
     );
 }

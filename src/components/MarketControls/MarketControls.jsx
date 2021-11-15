@@ -1,5 +1,6 @@
 import React from "react";
 import SortList from "./../SortList/SortList";
+import styles from './MarketControls.module.scss';
 
 const MarketControls = ({
     searchValue,
@@ -18,7 +19,10 @@ const MarketControls = ({
                 marginBottom: "105px",
             }}
         >
-            <input type="text" value={searchValue} onChange={onSearchInput} />
+        <form className={styles.search}>
+            <img src='img/searchIcon.png' className={styles.searchIcon} alt="Search field"/>
+            <input type="text" value={searchValue} onChange={onSearchInput} className={styles.input} />
+        </form>
             <SortList sortType={sortType} setSortType={setSortType} />
         </div>
     );

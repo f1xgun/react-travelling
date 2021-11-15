@@ -34,8 +34,10 @@ function HotelCard(props) {
                     <p className={styles.place}>{props.place}</p>
                 </div>
                 <span>{props.price}</span>
-                <p className={styles.reviews}>{props.reviewsCount} reviews</p>
-                <Button className={styles.button} title="See avalibility" />
+                <div className={styles.flex}>
+                    <p className={styles.reviews}>{props.reviewsCount} reviews</p>
+                    <Button className={styles.button} title="See avalibility" />
+                </div>
             </div>
         </div>
     );

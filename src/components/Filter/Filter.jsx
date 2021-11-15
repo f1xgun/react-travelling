@@ -4,7 +4,7 @@ import Input from '../Input/Input.jsx';
 
 function Filter() {
   return (
-    <div>
+    <div className={styles.filter}>
       <ul>
         <li className={styles.mainItem}>
           <p className={styles.name}>Flying from?</p>
