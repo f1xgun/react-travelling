@@ -1,7 +1,16 @@
-import Button from "../Button";
-import styles from "./Header.module.scss";
-import { Switch, Route, NavLink } from "react-router-dom";
-function Header() {
+import Button from '../Button';
+import styles from './Header.module.scss';
+import { NavLink } from 'react-router-dom';
+import { useContext } from 'react';
+import { Context } from '../..';
+import { observer } from 'mobx-react-lite';
+import { useHistory } from 'react-router';
+import { ADMIN_ROUTE, LOGIN_ROUTE } from '../../consts';
+
+const Header = observer(() => {
+  const { user } = useContext(Context);
+  const loginClick = () => user.setIsAuth(true);
+  const history = useHistory();
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -27,9 +36,24 @@ function Header() {
           <li>Feedback</li>
         </NavLink>
       </ul>
-      <Button className={styles.login} title="Login" />
+      {user.isAuth ? (
+        <div>
+          <Button
+            className={styles.login}
+            onClick={() => history.push(ADMIN_ROUTE)}
+            title="Admin"
+          />
+          <Button
+            className={styles.login}
+            onClick={() => history.push(LOGIN_ROUTE)}
+            title="Logout"
+          />
+        </div>
+      ) : (
+        <Button className={styles.login} onClick={loginClick} title="Login" />
+      )}
     </header>
   );
-}
+});
 
 export default Header;

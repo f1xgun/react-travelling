@@ -4,10 +4,17 @@ import './reset.scss';
 import './index.scss';
 
 import App from './App';
+import { createContext } from 'react';
+import UserStore from './components/UserStore';
+export const Context = createContext(null)
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Context.Provider value={{
+    user: new UserStore(),
+  }}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Context.Provider>,
   document.getElementById('root')
 );

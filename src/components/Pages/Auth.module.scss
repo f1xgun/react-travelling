@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  padding: 5px;
+  width: 600px;
+}
+
+.title {
+  margin: auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  margin-top: 2px;
+}
+
+.btn {
+  margin-top: 3px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3px;
+}
