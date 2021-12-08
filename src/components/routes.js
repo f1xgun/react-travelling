@@ -2,7 +2,7 @@ import Places from "./Pages/Places"
 import Admin from './Pages/Admin';
 import Auth from './Pages/Auth';
 import Home from './Pages/Home';
-import { ADMIN_ROUTE, HOME_ROUTE, HOTEL_ROUTE, LOGIN_ROUTE, PLACE_ROUTE, REGISTRATION_ROUTE } from "../consts";
+import { ADMIN_ROUTE, BASKET_ROUTE, HOME_ROUTE, HOTEL_ROUTE, LOGIN_ROUTE, PLACE_ROUTE, REGISTRATION_ROUTE } from "../consts";
 import HotelCard from "./HotelCard/HotelCard";
 
 export const authRoutes = [

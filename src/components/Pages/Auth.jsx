@@ -1,14 +1,15 @@
 import { observer } from 'mobx-react-lite';
 import React, { useContext, useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import { Context } from '../../index';
-import { LOGIN_ROUTE, REGISTRATION_ROUTE } from '../../consts';
+import { HOME_ROUTE, LOGIN_ROUTE, PLACE_ROUTE, REGISTRATION_ROUTE } from '../../consts';
 import { login, registration } from '../../http/userAPI';
 import styles from './Auth.module.scss';
 
 const Auth = observer(() => {
   const { user } = useContext(Context);
   const location = useLocation();
+  const history = useHistory();
   const isLogin = location.pathname === LOGIN_ROUTE;
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -23,13 +24,14 @@ const Auth = observer(() => {
       }
       user.setUser(user);
       user.setIsAuth(true);
+      history.push(HOME_ROUTE);
     } catch (e) {
       alert(e.response.data.message);
     }
   };
 
   return (
-    <div className={styles.container} style={{ height: window.innerHeight - 54 }}>
+    <div className={styles.container} style={{ height: window.innerHeight - 100 }}>
       <div className={styles.card}>
         <h2 className={styles.title}>{isLogin ? 'Авторизация' : 'Регистрация'}</h2>
         <form className={styles.form}>

@@ -1,34 +1,31 @@
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import { authRoutes, publicRoutes } from "./components/routes";
-import { HOME_ROUTE } from "./consts";
-import { useContext } from "react";
+import { observer } from "mobx-react-lite";
+import { useContext, useEffect, useState } from "react";
+import { Spinner } from "react-bootstrap";
+import { BrowserRouter } from "react-router-dom";
 import { Context } from ".";
+import AppRouter from "./AppRouter";
+import { check } from "./http/userAPI";
 
-function App() {
+const App = observer(() => {
   const {user} = useContext(Context)
+  const [loading, setLoading] = useState(true)
 
+  useEffect(() => {
+    check().then(data => {
+      user.setUser(true)
+      user.setIsAuth(true)
+    }).finally(() => setLoading(false))
+  }, [])
+
+  if (loading) {
+    return <Spinner animation={"grow"}/>
+  }
 
   return (
-    <Router>
-      <div>
-        <div className="wrapper">
-          <Header />
-          <Switch>
-            {user.isAuth && authRoutes.map(({path, Component}) =>
-              <Route key={path} path={path} component={Component} exact />
-            )}
-            {publicRoutes.map(({path, Component}) =>
-              <Route key={path} path={path} component={Component} exact />
-            )}
-            <Redirect to={HOME_ROUTE} />
-          </Switch>
-        </div>
-        <Footer />
-      </div>
-    </Router>
-  );
-}
+    <BrowserRouter>
+      <AppRouter />
+    </BrowserRouter>
+  )
+})
 
 export default App;

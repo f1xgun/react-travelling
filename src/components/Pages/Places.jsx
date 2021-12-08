@@ -1,42 +1,53 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import HotelCard from '../HotelCard/HotelCard';
 import MarketPreview from '../MarketPreview/MarketPreview';
 import Filter from '../Filter/Filter';
 import MarketControls from './../MarketControls/MarketControls';
+import CityBar from '../CityBar/CityBar';
+import { Context } from '../..';
+import { observer } from 'mobx-react-lite';
+import { fetchCities, fetchHotels } from '../../http/hotelAPI';
 
-const cards = [
-  {
-    id: 1,
-    name: 'The Old Bank',
-    grade: 5,
-    place: 'Oxford City Centre, Oxford',
-    imageUrl: 'img/HotelCards/TheOldBank.png',
-    reviewsCount: 699,
-    price: 1500,
-  },
-  {
-    id: 2,
-    name: 'Name2',
-    grade: 3,
-    place: 'Oxford City Centre, Oxford',
-    imageUrl: 'img/HotelCards/TheOldBank.png',
-    reviewsCount: 23,
-    price: 1200,
-  },
-  {
-    id: 3,
-    name: 'Name3',
-    grade: 4,
-    place: 'Oxford City Centre, Oxford',
-    imageUrl: 'img/HotelCards/TheOldBank.png',
-    reviewsCount: 643,
-    price: 1000,
-  },
-];
+// const cards = [
+//   {
+//     id: 1,
+//     name: 'The Old Bank',
+//     grade: 5,
+//     place: 'Oxford City Centre, Oxford',
+//     imageUrl: 'img/HotelCards/TheOldBank.png',
+//     reviewsCount: 699,
+//     price: 1500,
+//   },
+//   {
+//     id: 2,
+//     name: 'Name2',
+//     grade: 3,
+//     place: 'Oxford City Centre, Oxford',
+//     imageUrl: 'img/HotelCards/TheOldBank.png',
+//     reviewsCount: 23,
+//     price: 1200,
+//   },
+//   {
+//     id: 3,
+//     name: 'Name3',
+//     grade: 4,
+//     place: 'Oxford City Centre, Oxford',
+//     imageUrl: 'img/HotelCards/TheOldBank.png',
+//     reviewsCount: 643,
+//     price: 1000,
+//   },
+// ];
 
-function Places() {
+const Places = () => {
   const [searchValue, setSearchValue] = React.useState('');
   const [sortType, setSortType] = React.useState('popularity');
+
+  const { hotel } = useContext(Context);
+  useEffect(() => {
+    fetchCities().then((data) => hotel.setCities(data));
+    fetchHotels().then((data) => hotel.setHotels(data.rows));
+  }, []);
+  let cards = hotel.hotels;
 
   let filterCards = (cards) => {
     switch (sortType) {
@@ -63,17 +74,20 @@ function Places() {
         setSortType={setSortType}
       />
       <div className="places-content">
-        <Filter />
+        <CityBar />
         <div>
           {filterCards(cards)
             .filter((item) => item.name.toLowerCase().includes(searchValue.toLowerCase()))
             .map((card) => (
               <HotelCard key={card.id} {...card} />
             ))}
+          {/* {hotel.hotels.map((hotel) => (
+            <HotelCard key={hotel.id} {...hotel} />
+          ))} */}
         </div>
       </div>
     </>
   );
-}
+};
 
 export default Places;

@@ -1,8 +1,11 @@
 import React from 'react';
+import { useHistory } from 'react-router';
+import { HOTEL_ROUTE } from '../../consts.js';
 import Button from '../Button.jsx';
 import styles from './HotelCard.module.scss';
 
 function HotelCard(props) {
+  const history = useHistory();
   let gradeStars = [];
   let star = (
     <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -13,11 +16,11 @@ function HotelCard(props) {
     </svg>
   );
 
-  for (let i = 0; i < props.grade; i++) gradeStars.push(star);
+  for (let i = 0; i < props.rating; i++) gradeStars.push(star);
 
   return (
-    <div className={styles.card}>
-      <img src={props.imageUrl} className={styles.img} alt={props.name} />
+    <div className={styles.card} onClick={() => history.push(HOTEL_ROUTE + '/' + props.id)}>
+      <img src={`http://localhost:5000/` + props.img} className={styles.img} alt={props.name} />
       <div className={styles.content}>
         <div>
           <div className={styles.information}>

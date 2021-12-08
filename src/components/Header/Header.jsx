@@ -2,15 +2,20 @@ import Button from '../Button';
 import styles from './Header.module.scss';
 import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
-import { Context } from '../..';
 import { observer } from 'mobx-react-lite';
 import { useHistory } from 'react-router';
 import { ADMIN_ROUTE, LOGIN_ROUTE } from '../../consts';
+import { Context } from '../..';
 
 const Header = observer(() => {
   const { user } = useContext(Context);
   const loginClick = () => user.setIsAuth(true);
   const history = useHistory();
+
+  const logOut = () => {
+    user.setUser({});
+    user.setIsAuth(false);
+  };
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -43,14 +48,10 @@ const Header = observer(() => {
             onClick={() => history.push(ADMIN_ROUTE)}
             title="Admin"
           />
-          <Button
-            className={styles.login}
-            onClick={() => history.push(LOGIN_ROUTE)}
-            title="Logout"
-          />
+          <Button className={styles.login} onClick={() => logOut()} title="Logout" />
         </div>
       ) : (
-        <Button className={styles.login} onClick={loginClick} title="Login" />
+        <Button className={styles.login} onClick={() => history.push(LOGIN_ROUTE)} title="Login" />
       )}
     </header>
   );
