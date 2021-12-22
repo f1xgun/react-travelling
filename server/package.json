@@ -5,6 +5,7 @@
   "main": "index.js",
   "proxy": "http://localhost:3000",
   "scripts": {
+    "start": "node app.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [],
