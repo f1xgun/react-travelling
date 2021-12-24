@@ -3,11 +3,8 @@ import HotelCard from '../HotelCard/HotelCard';
 import MarketPreview from '../MarketPreview/MarketPreview';
 import Filter from '../Filter/Filter';
 import MarketControls from '../MarketControls/MarketControls';
-import CityBar from '../CityBar/CityBar';
 import { Context } from '../..';
-import { observer } from 'mobx-react-lite';
-import { fetchCities, fetchHotels } from '../../src/http/hotelAPI';
-
+import { fetchCities, fetchHotels } from '../../http/hotelAPI';
 const Places = () => {
   const [searchValue, setSearchValue] = React.useState('');
   const [sortType, setSortType] = React.useState('popularity');
