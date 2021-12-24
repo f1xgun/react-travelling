@@ -5,8 +5,8 @@ import './index.scss';
 
 import App from './App';
 import { createContext } from 'react';
-import UserStore from '../components/UserStore';
-import HotelStore from '../components/HotelStore';
+import UserStore from './components/UserStore';
+import HotelStore from './components/HotelStore';
 export const Context = createContext(null)
 
 ReactDOM.render(

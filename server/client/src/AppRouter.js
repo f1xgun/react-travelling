@@ -1,7 +1,7 @@
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import { authRoutes, publicRoutes } from "../components/routes";
+import { authRoutes, publicRoutes } from "./components/routes";
 import { HOME_ROUTE } from "./consts";
 import { useContext } from "react";
 import { Context } from ".";
