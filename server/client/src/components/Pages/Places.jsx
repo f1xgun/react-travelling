@@ -6,7 +6,7 @@ import MarketControls from '../MarketControls/MarketControls';
 import CityBar from '../CityBar/CityBar';
 import { Context } from '../..';
 import { observer } from 'mobx-react-lite';
-import { fetchCities, fetchHotels } from '../../http/hotelAPI';
+import { fetchCities, fetchHotels } from '../../src/http/hotelAPI';
 
 const Places = () => {
   const [searchValue, setSearchValue] = React.useState('');
