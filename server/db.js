@@ -7,7 +7,10 @@ module.exports = new Sequelize(
     dialect: 'postgres',
     protocol: 'postgres',
     dialectOptions: {
-      ssl: true
+      ssl: {
+        require: true,
+        rejectUnauthorized: false
+      }
     }
   }
 )
