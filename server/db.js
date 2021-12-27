@@ -1,16 +1,14 @@
 const {Sequelize} = require('sequelize')
+require('dotenv').config()
 
 
 module.exports = new Sequelize(
-  process.env.DATABASE_URL,
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASSWORD,
   {
     dialect: 'postgres',
-    protocol: 'postgres',
-    dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false
-      }
-    }
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
   }
 )
